@@ -137,16 +137,16 @@ async function updateScore() {
 }
 
 async function checkDuelResults(playerCardId, ComputerCardId) {
-    let duelResults = "DRAW"
+    let duelResults = "Draw"
     let playerCard = cardData[playerCardId]
 
     if(playerCard.WinOf.includes(ComputerCardId)){
-        duelResults = "WIN";
+        duelResults = "Win";
         state.score.playerScore++;
     }
 
     if(playerCard.loseOf.includes(ComputerCardId)){
-        duelResults = "LOSE";
+        duelResults = "Lose";
         state.score.computerScore++;
     }
 
